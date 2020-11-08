@@ -119,9 +119,8 @@ exports.run = async (client, message, args) => {
             icon_url: message.author.displayAvatarURL()
         }
     }});
-    if(process.env.logchannelid === 'false') return;
-    let logchannel = await message.guild.channels.cache.get(process.env.logchannelid);
-    logchannel.send({embed: {
+     channel = client.channels.cache.get(process.env.logchannelid);
+    channel.send({embed: {
         color: 2127726,
         description: `<@${message.author.id}> has ranked ${username} from ${rankNameInGroup} (${rankInGroup}) to ${setRankResponse.name} (${setRankResponse.rank}).`,
         author: {
