@@ -92,9 +92,8 @@ exports.run = async (client, message, args) => {
             icon_url: message.author.displayAvatarURL()
         }
     }});
-    if(process.env.logchannelid === 'false') return;
-    let logchannel = await message.guild.channels.cache.get(process.env.logchannelid);
-    logchannel.send({embed: {
+     channel = client.channels.cache.get(process.env.logchannelid);
+    channel.send({embed: {
         color: "#404dff",
         description: `<@${message.author.id}> has demoted ${username} from ${rankNameInGroup} (${rankInGroup}) to ${demoteResponse.newRole.name} (${demoteResponse.newRole.rank}).`,
         author: {
