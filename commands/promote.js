@@ -92,9 +92,11 @@ exports.run = async (client, message, args) => {
             icon_url: message.author.displayAvatarURL()
         }
     }});
+    
     if(process.env.logchannelid === 'false') return;
     let logchannel = await message.guild.channels.cache.get(process.env.logchannelid);
-    message.channel.send({embed: {
+    message.channel.send("Testing Log Channel")
+    message.logchannel.send({embed: {
         color: "#404dff",
         description: `<@${message.author.id}> has promoted ${username} from ${rankNameInGroup} (${rankInGroup}) to ${promoteResponse.newRole.name} (${promoteResponse.newRole.rank}).`,
         author: {
