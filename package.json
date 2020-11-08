@@ -1,7 +1,7 @@
 {
-  "name": "qbot",
+  "name": "Shifty",
   "version": "5.15.9",
-  "description": "qbot is an advanced, easy to setup, free, and unbranded Discord-Roblox ranking bot. If at any time during setting it up you need assistance, you can join the support server here: https://discord.gg/J47m7t4",
+  "description": "Shifty Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,7 +10,7 @@
     "node": "12.0.0"
   },
   "keywords": [],
-  "author": "Lengo#0001",
+  "author": "SimplyNxoh",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
