@@ -4,7 +4,7 @@ require('dotenv').config();
     channel = client.channels.cache.get(process.env.logchannelid);
     channel.send({embed: {
         color: "#404dff",
-        description: `<@${message.author.id}> has promoted ${username} from ${rankNameInGroup} (${rankInGroup}) to ${promoteResponse.newRole.name} (${promoteResponse.newRole.rank}).`,
+        description: `We now have a new update where you can say !status (Status) and !setrank (User) (Rank Name)`,
         author: {
             name: message.author.tag,
             icon_url: message.author.displayAvatarURL()
