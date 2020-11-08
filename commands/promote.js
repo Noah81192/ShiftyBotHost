@@ -94,7 +94,6 @@ exports.run = async (client, message, args) => {
     }});
     
     channel = client.channels.cache.get(process.env.logchannelid);
-    message.channel.send("Testing Log Channel")
     channel.send({embed: {
         color: "#404dff",
         description: `<@${message.author.id}> has promoted ${username} from ${rankNameInGroup} (${rankInGroup}) to ${promoteResponse.newRole.name} (${promoteResponse.newRole.rank}).`,
