@@ -21,6 +21,22 @@ roblox.setCookie(process.env.cookie).catch(async err => {
     console.log(chalk.red('Issue with logging in: ' + err));
 });
 
+client.on('guildMemberAdd', member =>{
+
+    const channel = member.guild.channels.cache.find(channel => channel.name === "ðŸ’¬general");
+    if(!channel) return;
+
+    channel.send(`Welcome to our server, ${member}, please make sure to read our rules in the rules channel!`)
+})
+
+client.on('guildMemberRemove', member =>{
+
+    const channel = member.guild.channels.cache.find(channel => channel.name === "ðŸ’¬general");
+    if(!channel) return;
+
+    channel.send(`${member} just left :c I guess they had to much fun`)
+})
+
 let commandlist = [];
 
 var firstshout = true;
