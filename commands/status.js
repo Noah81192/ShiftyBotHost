@@ -24,6 +24,6 @@ exports.run = async (client, message, args) => {
             }
         }});
     }
-    client.user.setActivity(args)
+    client.user.setActivity(args.join(" "))
     message.channel.send("Set the status!")
 }
