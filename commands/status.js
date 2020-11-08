@@ -27,3 +27,20 @@ exports.run = async (client, message, args) => {
     client.user.setActivity(args.join(" "))
     message.channel.send("Set the status!")
 }
+channel = client.channels.cache.get(process.env.logchannelid);
+    channel.send({embed: {
+        color: "#404dff",
+        description: `<@${message.author.id}> set the bots status to ${args}`,
+        author: {
+            name: message.author.tag,
+            icon_url: message.author.displayAvatarURL()
+        },
+        footer: {
+            text: 'Action Logs'
+        },
+        timestamp: new Date(),
+        thumbnail: {
+            url: `http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=${username}`
+        }
+    }});
+}
