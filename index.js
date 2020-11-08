@@ -77,7 +77,7 @@ fs.readdir('./commands/', async (err, files) => {
 });
 
 client.on('ready', async () => {
-  console.log(chalk.yellow(figlet.textSync('qbot', { horizontalLayout: 'full' })));
+  console.log(chalk.yellow(figlet.textSync('Shifty', { horizontalLayout: 'full' })));
   console.log(chalk.red(`Bot started!\n---\n`
   + `> Channels: ${client.channels.cache.size}\n`
   + `> Servers: ${client.guilds.cache.size}`));
