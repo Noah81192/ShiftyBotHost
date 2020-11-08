@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
         + `\`${process.env.prefix}fire <user>\` - Moves a user to the lowest rank possible besides Guest.\n`
         + `\`${process.env.prefix}shout <message>\` - Posts a group shout.\n`
         + `\`${process.env.prefix}clearshout\` - Clears the group shout.\n`
-        + `\`${process.env.prefix}currentshout\` - Shows the current group shout.\n`
+        + `\`${process.env.prefix}currentshout\` - Shows the current group shout.\n`,
         author: {
             name: message.author.tag,
             icon_url: message.author.displayAvatarURL()
